@@ -1,0 +1,29 @@
+#%RAML 1.0
+title: three
+
+/one:
+  post:
+    body:
+      application/json:
+        type: object
+        properties:
+          first:
+            type: string
+          last:
+            type: string
+            
+    queryParameters:
+      first:
+        type: string
+        required: true
+      last:
+        type: string
+        required: true
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "name": "balaji"
+              }
